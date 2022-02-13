@@ -54,3 +54,4 @@ N/A
 
 ## Deploy
 Heroku: https://nf-note-taker.herokuapp.com/
+Github: https://github.com/NFoithong/NF-note-taker.git
