@@ -11,8 +11,10 @@ const PORT = process.env.PORT || 3001;
 //middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, './develop/public')));
+// app.use(express.static(path.join(__dirname, './develop/public')));
+app.use(express.static(path.resolve(process.cwd(), 'develop/public')))
 app.use(express.static('public'));
+
 
 let notesData = [];
 
@@ -89,20 +91,24 @@ app.delete('/api/notes/:id', (req, res) => {
 
 // route to index.html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './develop/public/index.html'));
+    // res.sendFile(path.join(__dirname, './develop/public/index.html'));
+    res.sendFile(path.resolve(process.cwd(), './develop/public/index.html'));
 });
 // route to notes.html
 app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, './develop/public/notes.html'));
+    // res.sendFile(path.join(__dirname, './develop/public/notes.html'));
+    res.sendFile(path.resolve(process.cwd(), './develop/public/notes.html'));
 });
 // If no matching route is default to index.html page
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './develop/public/index.html'));
+    // res.sendFile(path.join(__dirname, './develop/public/index.html'));
+    res.sendFile(path.resolve(process.cwd(), './develop/public/index.html'));
 });
 
 // Get api/notes
 app.get('api/notes', (req, res) => {
-    return res.sendFile(path.join(__dirname, './develop/db/db.json'));
+    // return res.sendFile(path.join(__dirname, './develop/db/db.json'));
+    return res.sendFile(path.resolve(process.cwd(), './develop/db/db.json'));
 });
 
 app.listen(PORT, () => {
