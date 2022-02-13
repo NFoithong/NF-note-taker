@@ -15,7 +15,6 @@ app.use(express.static(path.join(__dirname, './develop/public')));
 // app.use(express.static(path.resolve(process.cwd(), 'develop/public')))
 app.use(express.static('public'));
 
-
 let notesData = [];
 
 // api call response for all the notes, and sends the results to the browser as an array of object
