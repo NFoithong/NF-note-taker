@@ -17,7 +17,6 @@ app.use(express.static('public'));
 
 let notesData = [];
 
-
 // api call response for all the notes, and sends the results to the browser as an array of object
 app.get('/api/notes', (err, res) => {
     try {
@@ -91,7 +90,9 @@ app.delete('/api/notes/:id', (req, res) => {
 
 // route to index.html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './develop/public/index.html'));
+    // res.sendFile(path.join(__dirname, './develop/public/index.html'));
+    res.sendFile('index.html', { root: 'public' });
+
     // res.sendFile(path.resolve(process.cwd(), './develop/public/index.html'));
 });
 // route to notes.html
@@ -101,7 +102,8 @@ app.get('/notes', (req, res) => {
 });
 // If no matching route is default to index.html page
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './develop/public/index.html'));
+    // res.sendFile(path.join(__dirname, './develop/public/index.html'));
+    res.sendFile('index.html', { root: 'public' });
     // res.sendFile(path.resolve(process.cwd(), './develop/public/index.html'));
 });
 
