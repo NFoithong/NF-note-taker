@@ -4,8 +4,6 @@ const fs = require('fs');
 const path = require('path');
 // need express to interact with the front end
 const express = require('express');
-const { get } = require('http');
-const { notStrictEqual } = require('assert');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
