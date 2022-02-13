@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Note Taker Application
 
 ## Desciption
@@ -51,3 +52,7 @@ N/A
 
 
 ## Deploy
+=======
+# NF-note-taker
+Create an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
+>>>>>>> 13a5bb0db9a671fd4add511fe32f329f380063f8
