@@ -17,6 +17,7 @@ app.use(express.static('public'));
 
 let notesData = [];
 
+
 // api call response for all the notes, and sends the results to the browser as an array of object
 app.get('/api/notes', (err, res) => {
     try {
