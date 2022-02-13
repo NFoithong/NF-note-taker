@@ -2,5 +2,24 @@
   "dependencies": {
     "express": "^4.17.2",
     "nodemon": "^2.0.15"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "nf-note-taker",
+  "description": "## Desciption Create an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NFoithong/NF-note-taker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NFoithong/NF-note-taker/issues"
+  },
+  "homepage": "https://github.com/NFoithong/NF-note-taker#readme"
 }
