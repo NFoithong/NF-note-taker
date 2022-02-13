@@ -89,12 +89,11 @@ app.delete('/api/notes/:id', (req, res) => {
 //HTML get request
 
 // route to index.html
-app.get('/', (req, res) => {
-    // res.sendFile(path.join(__dirname, './develop/public/index.html'));
-    res.sendFile('index.html', { root: 'public' });
-
-    // res.sendFile(path.resolve(process.cwd(), './develop/public/index.html'));
-});
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, './develop/public/index.html'));
+// res.sendFile('index.html', { root: 'public' });
+// res.sendFile(path.resolve(process.cwd(), './develop/public/index.html'));
+// });
 // route to notes.html
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './develop/public/notes.html'));
@@ -102,8 +101,8 @@ app.get('/notes', (req, res) => {
 });
 // If no matching route is default to index.html page
 app.get('*', (req, res) => {
-    // res.sendFile(path.join(__dirname, './develop/public/index.html'));
-    res.sendFile('index.html', { root: 'public' });
+    res.sendFile(path.join(__dirname, './develop/public/index.html'));
+    // res.sendFile('index.html', { root: 'public' });
     // res.sendFile(path.resolve(process.cwd(), './develop/public/index.html'));
 });
 
